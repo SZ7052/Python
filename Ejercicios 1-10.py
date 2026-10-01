@@ -1,16 +1,22 @@
-Hours=int(input('Enter Hours: \n'))
+Hours = input('Enter Hours: \n')
 
-Rate=int(input('Enter Rate: \n'))
+Rate = input('Enter Rate: \n')
 
-horasextra=Hours-40
+try:
 
 
-if Hours> 0 and Hours<=40 :
-    calculonormal=Hours*Rate
-    print(calculonormal)
-else :
-    calculounocinco=40*Rate + (horasextra * (Rate*1.5))
-    print(calculounocinco)
+
+    horasextra = Hours - 40
+
+    if Hours> 0 and Hours<=40 :
+        calculonormal=Hours*Rate
+        print(calculonormal)
+    else :
+        calculounocinco=40*Rate + (horasextra * (Rate*1.5))
+        print(calculounocinco)
+
+except :
+    print("Error,please enter numeric input")
 
 
 
