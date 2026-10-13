@@ -1,4 +1,10 @@
-#Ejercicio 1: Verificación de edad
-#Pide al usuario que introduzca su edad. Valida que sea un número entero positivo. Si la edad
-#es mayor o igual a 18, muestra un mensaje indicando que es mayor de edad. Si no, indica que
-#es menor de edad.
+try:
+  edad = int(input("Introduce tu edad: "))
+  if edad < 0:
+    print("Error: La edad no puede ser un número negativo.")
+  elif edad >= 18:
+    print("Eres mayor de edad.")
+  else:
+    print("Eres menor de edad.")
+except ValueError:
+  print("Error: Debes introducir un número entero válido.")

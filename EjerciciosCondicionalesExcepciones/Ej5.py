@@ -1,9 +1,18 @@
-"""
-Ejercicio 5: Menú de selección
-Muestra un menú con tres opciones:
-1. Ver perfil
-2. Editar perfil
-3. Salir
-Pide al usuario que introduzca el número de la opción. Muestra un mensaje según la opción
-elegida. Si introduce un valor no válido, muestra un mensaje de error.
-"""
+print("--- MENÚ DE OPCIONES ---")
+print("1. Ver perfil")
+print("2. Editar perfil")
+print("3. Salir")
+
+try:
+  opcion = int(input("Introduce el número de la opción (1-3): "))
+
+  if opcion == 1:
+    print("Has seleccionado: Ver perfil.")
+  elif opcion == 2:
+    print("Has seleccionado: Editar perfil.")
+  elif opcion == 3:
+    print("Saliendo del programa...")
+  else:
+    print("Error: Opción no válida. Debe ser un número entre 1 y 3.")
+except ValueError:
+  print("Error: Debes introducir un número entero válido.")

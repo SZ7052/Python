@@ -1,7 +1,18 @@
-#Ejercicio 3: Validación de nota
-#Pide al usuario una nota numérica entre 0 y 10. Valida que sea un número decimal dentro
-#del rango. Clasifica la nota como:
-#Suspenso (0-4.9)
-#Aprobado(5-6.9)
-#Notable (7-8.9)
-#Sobresaliente (9-10)
+try:
+  nota = float(
+      input("Introduce una nota numérica entre 0 y 10 (puedes usar decimales): ")
+  )
+
+  if 0 <= nota <= 10:
+    if nota < 5:
+      print("Suspenso")
+    elif nota < 7:
+      print("Aprobado")
+    elif nota < 9:
+      print("Notable")
+    else:
+      print("Sobresaliente")
+  else:
+    print("Error: La nota debe estar comprendida entre 0 y 10.")
+except ValueError:
+  print("Error: Debes introducir un valor numérico válido.")

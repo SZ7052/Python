@@ -1,8 +1,15 @@
-"""
-Ejercicio 7: Verificación de permisos para conducir según edad
-Solicita al usuario su edad. Según la edad, muestra qué tipo de vehículo puede conducir:
-- Menor de 14: no puede conducir
-- 14 o más: moto de poca cilindrada
-- 16 o más: moto de gran cilindrada
-- 18 o más: coche
-"""
+try:
+  edad = int(input("Introduce tu edad para verificar tus permisos: "))
+
+  if edad < 0:
+    print("Error: La edad no puede ser negativa.")
+  elif edad >= 18:
+    print("Puedes conducir: Moto de poca cilindrada, moto de gran cilindrada y coche.")
+  elif edad >= 16:
+    print("Puedes conducir: Moto de poca cilindrada y moto de gran cilindrada.")
+  elif edad >= 14:
+    print("Puedes conducir: Moto de poca cilindrada.")
+  else:
+    print("No puedes conducir ningún vehículo.")
+except ValueError:
+  print("Error: Debes introducir un número entero válido.")
