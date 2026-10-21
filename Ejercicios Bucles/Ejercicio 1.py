@@ -1,3 +1,39 @@
+print("=== CALCULADORA BÁSICA ===")
+while True:
+    print("\nOperaciones disponibles: +, -, *, /")
+    print("Escribe 'salir' para terminar.")
+
+    op = input("Introduce la operación (+, -, *, /) o 'salir': ").strip().lower()
+    if op == 'salir':
+        print("¡Hasta luego!")
+        break
+
+    if op not in ('+', '-', '*', '/'):
+        print("❌ Operación no válida. Inténtalo de nuevo.")
+        continue
+
+    try:
+        num1 = float(input("Introduce el primer número: "))
+        num2 = float(input("Introduce el segundo número: "))
+    except ValueError:
+        print("❌ Error: Debes introducir un valor numérico válido.")
+        continue
+
+    if op == '+':
+        resultado = num1 + num2
+        print(f"Resultado: {num1} + {num2} = {resultado}")
+    elif op == '-':
+        resultado = num1 - num2
+        print(f"Resultado: {num1} - {num2} = {resultado}")
+    elif op == '*':
+        resultado = num1 * num2
+        print(f"Resultado: {num1} * {num2} = {resultado}")
+    elif op == '/':
+        if num2 == 0:
+            print("❌ Error: No se puede dividir entre cero.")
+        else:
+            resultado = num1 / num2
+            print(f"Resultado: {num1} / {num2} = {resultado}")
 """
 Ejercicio 1: Calculadora de operaciones básicas
 Crea un programa que simule una calculadora. El usuario debe introducir dos números y
