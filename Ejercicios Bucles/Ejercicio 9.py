@@ -4,7 +4,6 @@ Crea un programa que dada una lista de las notas de un grupo de alumnos, calcule
 1. Contar cuántos alumnos han aprobado (nota ≥ 5).
 2. Calcular la nota media del grupo.
 3. Mostrar la nota más alta y la más baja.
-
 """
 
 notas = [4.5, 7.0, 9.2, 3.8, 5.0, 8.5, 2.0, 6.4]
