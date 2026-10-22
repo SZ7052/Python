@@ -42,3 +42,71 @@ else:
     print("Valor incorrecto")
 except ValueError:
     print("Valor incorrecto")
+
+
+# Definimos excepciones personalizadas para cumplir con el enunciado
+class CantidadInvalidaError(Exception):
+    pass
+
+
+class DemasiadasEntradasError(Exception):
+    pass
+
+
+# Variables iniciales
+entradas_disponibles = 25
+activo = True
+
+while activo:
+    print("\n--- MENÚ TEATRO ---")
+    print("1. Comprar entradas.")
+    print("2. Mostrar entradas disponibles.")
+    print("3. Salir.")
+
+    try:
+        # Controlamos que la opción del menú sea un número entero
+        numeromenu = int(input("Ingrese un número de menú: "))
+
+        if numeromenu == 1:
+            try:
+                # Solicitar número de entradas
+                numeroentradas = int(input("Ingrese el número de entradas que desea comprar: "))
+
+                # Validar cantidad <= 0
+                if numeroentradas <= 0:
+                    raise CantidadInvalidaError("La cantidad de entradas debe ser mayor que 0.")
+
+                # Validar si se solicitan más entradas de las disponibles
+                if numeroentradas > entradas_disponibles:
+                    raise DemasiadasEntradasError(
+                        f"No hay suficientes entradas. Quedan {entradas_disponibles} disponibles.")
+
+                # Si todo es correcto, actualizamos las entradas
+                entradas_disponibles -= numeroentradas
+                print(f"¡Compra realizada con éxito! Entradas restantes: {entradas_disponibles}")
+
+                # Opcional: Si se acaban las entradas, podemos finalizar
+                if entradas_disponibles == 0:
+                    print("¡Se han agotado todas las entradas!")
+                    activo = False
+
+            except ValueError:
+                print("Error: Debe introducir un valor numérico válido para las entradas.")
+            except CantidadInvalidaError as e:
+                print(f"Error: {e}")
+            except DemasiadasEntradasError as e:
+                print(f"Error: {e}")
+
+        elif numeromenu == 2:
+            print(f"-> Actualmente hay {entradas_disponibles} entradas disponibles.")
+
+        elif numeromenu == 3:
+            print("Saliendo del programa. ¡Hasta pronto!")
+            activo = False
+
+        else:
+            # Control de opción de menú no válida (sin usar excepciones, tal como pedía el enunciado)
+            print("Error: Opción de menú no válida. Elija un número entre 1 y 3.")
+
+    except ValueError:
+        print("Error: Debe introducir un número entero válido para seleccionar la opción del menú.")
