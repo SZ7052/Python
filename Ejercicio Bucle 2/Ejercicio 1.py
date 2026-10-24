@@ -48,7 +48,7 @@ while disponible and entradas > 0:
                     raise DemasiadasEntradasError("No hay suficientes entradas disponibles.")
 
                 entradas -= numeroentradas
-                print("¡Compra exitosa!")
+                print("Compra exitosa!")
 
                 if entradas == 0:
                     print("No hay más entradas disponibles.")
