@@ -7,7 +7,7 @@ El programa debe:
 Manejar errores de entrada con try-except:
     Capturar si el usuario introduce un valor no numérico (por ejemplo, texto o letras).
 Validar los datos ingresados:
-    Comprobar que tanto el precio como la cantidad sean números estrictamente positivos ($> 0$).
+    Comprobar que tanto el precio como la cantidad sean números estrictamente positivos (> 0).
 Si se introduce un valor menor o igual a cero, se debe mostrar un mensaje de error y pedir el dato de nuevo.
 Bucle interactivo:
     Repetir el proceso de solicitar precio y cantidad para múltiples productos hasta que el usuario introduzca un precio igual a 0 para finalizar la compra.
