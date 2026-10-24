@@ -12,7 +12,7 @@ Si se introduce un valor menor o igual a cero, se debe mostrar un mensaje de err
 Bucle interactivo:
     Repetir el proceso de solicitar precio y cantidad para múltiples productos hasta que el usuario introduzca un precio igual a 0 para finalizar la compra.
 Descuento por volumen (condicionales):
-    Al finalizar la compra, si el importe total acumulado supera los $50€, se aplicará un $10% de descuento sobre el total.
+    Al finalizar la compra, si el importe total acumulado supera los 50€, se aplicará un 10% de descuento sobre el total.
 Resultado final:
     Mostrar por pantalla el total sin descuento, el importe del descuento aplicado (si procede) y el total final a pagar.
 """
