@@ -8,42 +8,21 @@ para mayores de 12 años cuesta 12 €.
 valor negativo
 """
 
-
-#1
-
-for i in range(6):
-    try:
-        edad = int(input(f"Introduce la edad del usuario {i + 1}: "))
-
-        if edad < 0:
-            print("La edad no puede ser negativa.")
-        elif edad < 3:
-            print("El precio es: GRATIS (0 €)")
-        elif edad <= 12:
-            print("El precio es: 8 €")
-        else:
-            print("El precio es: 12 €")
-    except ValueError:
-        print("Error: Introduce un número entero válido.")
+precio = 0
 
 
 
-#2
+while edad >0:
+    for precio in range(6):
+    print("introduzca su edad")
+    edad = int(input("Ingrese su edad: "))
 
 
-continuar = True
-while continuar:
-    try:
-        edad = int(input("Introduce la edad del espectador (número negativo para salir): "))
 
-        if edad < 0:
-            print("Saliendo")
-            continuar = False
-        elif edad < 3:
-            print("El precio es: GRATIS")
-        elif edad <= 12:
-            print("El precio es: 8 €")
-        else:
-            print("El precio es: 12 €")
-    except ValueError:
-        print("Error: Introduce un número entero válido.")
+
+
+
+
+
+
+
