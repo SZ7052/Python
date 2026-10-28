@@ -17,3 +17,46 @@ disponibles, se debe controlar usando excepciones específicas.
 utilizar excepciones)
 
 """
+class Entradasuperior(Exception):
+    pass
+class NumeroNegativo(Exception):
+    pass
+
+
+entradas=25
+opcion=0
+
+while opcion!=3 and entradas > 0:
+    try:
+        opcion=int(input("ingrese una opcion: "))
+        if opcion==3:
+            print("Saliendo...")
+            break
+        if opcion==1:
+            try:
+                entradascompra=int(input("ingrese un numero de entradas: "))
+                if entradas>25:
+                    raise Entradasuperior("No hay tantas entradas")
+                if entradas<=0:
+                    raise NumeroNegativo("Numero negativo")
+                entradas-=entradascompra
+                print("Compra Exitosa!")
+                if entradas == 0:
+                    print("No hay más entradas disponibles.")
+                    break
+
+            except NumeroNegativo as e:
+                print(f"Error:{e}")
+            except Entradasuperior as e:
+                print(f"Error: {e}")
+            except ValueError:
+                print("Valor invalido")
+        elif opcion==2:
+            print(f"{entradas} entradas disponibles")
+        else:
+            print("Opcion invalida")
+
+
+
+    except ValueError:
+        print("Valor invalido")
