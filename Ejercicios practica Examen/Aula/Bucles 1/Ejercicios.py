@@ -84,11 +84,6 @@ while True:
 
 
 
-# Ejercicio 5. Números repetidos
-# Dispones de dos listas de números enteros.
-# Utiliza dos bucles for anidados para encontrar los números que aparecen en ambas listas y
-# mostrarlos por pantalla.
-# Cada número común deberá mostrarse una sola vez.
 
 
 
@@ -116,11 +111,13 @@ while True:
 # primos. Maneja errores si el usuario introduce un valor no válido.
 
 
+
 # Ejercicio 9: Análisis de notas de alumnos
 # Crea un programa que dada una lista de las notas de un grupo de alumnos, calcule:
 # 1. Contar cuántos alumnos han aprobado (nota ≥ 5).
 # 2. Calcular la nota media del grupo.
 # 3. Mostrar la nota más alta y la más baja.
+
 
 
 # Ejercicio 10: Calcula inversión

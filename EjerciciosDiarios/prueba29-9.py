@@ -6,3 +6,5 @@ for itervar in [3, 41, 12, 9, 74, 15]:
     total = total + itervar
 print('Total: ', total)
 
+for i in range(1,6):
+    print("olamundo")
