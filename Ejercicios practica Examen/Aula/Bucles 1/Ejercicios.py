@@ -6,57 +6,58 @@
 
 
 
-class ErrorZero(Exception):
-    pass
+# class ErrorZero(Exception):
+#     pass
+#
+#
+#
+#
+# opcion = 0
+#
+# while opcion!=5:
+#     print("1.Suma")
+#     print("2.Resta")
+#     print("3.Multiplicación")
+#     print("4.División")
+#     print("5.Salir")
+#     try:
+#
+#
+#         opcion=int(input("dime opcion "))
+#         if opcion==5:
+#             print("Saliendo...")
+#             break
+#
+#         n1 = float(input("dime n1 "))
+#         n2 = float(input("dime n2 "))
+#
+#         match opcion:
+#
+#             case 1:
+#                 Suma=n1+n2
+#                 print(Suma)
+#             case 2:
+#                 Resta=n1-n2
+#                 print(Resta)
+#             case 3:
+#                 Multiplicacion=n1*n2
+#                 print(Multiplicacion)
+#             case 4:
+#                 if n2 == 0:
+#                     raise ErrorZero("El divisor no puede ser cero")
+#
+#                 Divicion=n1/n2
+#                 print(Divicion)
+#
+#
+#
+#
+#
+#     except ErrorZero as e:
+#         print(f"Error: {e}")
+#     except ValueError:
+#         print("Valor invalido")
 
-
-
-
-opcion = 0
-
-while opcion!=5:
-    print("1.Suma")
-    print("2.Resta")
-    print("3.Multiplicación")
-    print("4.División")
-    print("5.Salir")
-    try:
-
-
-        opcion=int(input("dime opcion "))
-        if opcion==5:
-            print("Saliendo...")
-            break
-
-        n1 = float(input("dime n1 "))
-        n2 = float(input("dime n2 "))
-
-        match opcion:
-
-            case 1:
-                Suma=n1+n2
-                print(Suma)
-            case 2:
-                Resta=n1-n2
-                print(Resta)
-            case 3:
-                Multiplicacion=n1*n2
-                print(Multiplicacion)
-            case 4:
-                if n2 == 0:
-                    raise ErrorZero("El divisor no puede ser cero")
-
-                Divicion=n1/n2
-                print(Divicion)
-
-
-
-
-
-    except ErrorZero as e:
-        print(f"Error: {e}")
-    except ValueError:
-        print("Valor invalido")
 # Ejercicio 2: Tabla de multiplicar
 # Pide al usuario un número y muestra su tabla de multiplicar del 1 al 10.
 # Usa un bucle for para generar la tabla.
@@ -71,8 +72,9 @@ while True:
         print("Valor invalido")
 
 # Ejercicio 3: Cuenta atrás
-# Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla
-# la cuenta atrás desde ese número hasta cero separados por comas.
+# Escribir un programa que pida al usuario un número entero positivo
+# y muestre por pantalla la cuenta atrás desde ese número
+# hasta cero separados por comas.
 
 
 

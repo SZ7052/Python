@@ -68,8 +68,6 @@ while opcion != 4:
                 conversion=numero*162.50
                 print(round(conversion,2))
 
-
-
     except NumeroNegativo as e:
         print(f"Error:{e}")
     except OpcionNoValido as e:

@@ -4,11 +4,10 @@
  # // mostrarlos por pantalla.
  # // Cada número común deberá mostrarse una sola vez.
 
-nombres1=[1,2,3,4]
-nombres2=[7,8,9,1]
+nombres1 = [1, 2, 3, 4]
+nombres2 = [7, 8, 9, 1]
 
 for i in nombres1:
-    for j in nombres2:
-        if nombres1[i]==nombres2[j]:
-            print(nombres1[i])
-            print(nombres2[j])
+     for j in nombres2:
+         if nombres1 == nombres2:
+            print(nombres1)
